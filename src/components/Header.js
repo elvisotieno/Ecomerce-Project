@@ -1,5 +1,5 @@
 import React from 'react'
-import { logoDark, logoKenya } from '../assets'
+import { cart, logoDark, shoppingBag } from '../assets'
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
             <div>
                 <img className="w-28" src={logoDark} alt='TrackingHub'/>
             </div>
-            <div>
+            <div className='flex items-center gap-8'>
                 <ul className='flex items-center gap-8'>
                     <li className="text-base text-black hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">Home</li>
                     <li className="text-base text-black hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">Products</li>
@@ -16,6 +16,14 @@ const Header = () => {
                     <li className="text-base text-black hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">Element</li>
                     <li className="text-base text-black hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">Blog</li>
                 </ul>
+                <div className="relative">
+                    <img className='w-6' src={shoppingBag} alt='Shop'/>
+                    <span className="absolute w-6 top-1 left-0 text-sm flex items-center justify-center 
+                    font-semibold">0</span>
+                </div>
+                <div className="w-8 h-8 rounded-full">
+                    <img src={cart} alt="cart"/>
+                </div>
             </div>
         </div>
        </div>
